@@ -17,7 +17,8 @@ Este cliente se conecta al servidor de cine MCP para consumir herramientas como:
 
 - **Java:** 25
 - **Spring Boot:** 4.1.0
-- **Spring AI:** 2.0.0 (`spring-ai-starter-mcp-client`)
+- **Spring AI:** 2.0.0 (`spring-ai-starter-mcp-client`, `spring-ai-starter-model-ollama`)
+- **Modelo LLM Chat (Ollama):** `qwen3:4b`
 - **Gestor de dependencias:** Maven (`mvnw`)
 
 ---
@@ -26,7 +27,20 @@ Este cliente se conecta al servidor de cine MCP para consumir herramientas como:
 
 ```properties
 spring.application.name=7-cinema-mcp-client
-server.port=8082
+server.port=8080
+
+# Spring AI Ollama Configuration
+spring.ai.ollama.base-url=http://localhost:11434
+spring.ai.ollama.chat.model=qwen3:4b
+
+# Spring AI MCP Client Configuration
+spring.ai.mcp.client.enabled=true
+spring.ai.mcp.client.initialized=true
+spring.ai.mcp.client.request-timeout=60s
+
+# Connection to Cinema MCP Server (STREAMABLE protocol)
+spring.ai.mcp.client.streamable-http.connections.cinema-mcp-server.url=http://localhost:8081
+spring.ai.mcp.client.streamable-http.connections.cinema-mcp-server.endpoint=/mcp
 ```
 
 ---

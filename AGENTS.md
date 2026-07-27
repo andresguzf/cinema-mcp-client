@@ -47,7 +47,7 @@ src/main/java/com/andres/course/agy/springboot/cinemamcpclient/app/
 
 ```properties
 spring.application.name=7-cinema-mcp-client
-server.port=8082
+server.port=8080
 ```
 
 ---
