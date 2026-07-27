@@ -1,0 +1,14 @@
+{
+  "properties": [
+    {
+      "name": "spring.ai.mcp.client.streamable-http.connections.cinema-mcp-server.url",
+      "type": "java.lang.String",
+      "description": "URL base del servidor MCP de Cine (ejemplo: http://localhost:8081)."
+    },
+    {
+      "name": "spring.ai.mcp.client.streamable-http.connections.cinema-mcp-server.endpoint",
+      "type": "java.lang.String",
+      "description": "Endpoint del servidor MCP de Cine (ejemplo: /mcp)."
+    }
+  ]
+}
